@@ -1,0 +1,53 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 25px;
+    grid-auto-rows: 25px;
+    width:50%;
+    min-width:300px;
+    min-height: 500px;
+    background-color: whitesmoke;
+    margin:1em auto;
+    padding:1em;
+    gap: 1em;
+
+    header {
+        grid-column: span 3;
+    }
+
+    #add-button {
+        grid-column: span 6;
+        border:1.5px dotted black;
+        font-size:20px;
+    }
+
+
+    .list-item {
+        height:25px;
+        grid-column: span 6;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+
+        .list-input {
+            grid-column: span 5;
+            border:0px; 
+        }
+
+        .del-button{
+            grid-column: span 1;
+            height:25px;
+            background-color:red;
+            font-weight: bolder;
+            color:white;
+            border:0px;
+        }
+    }
+}
